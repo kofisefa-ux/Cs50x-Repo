@@ -2,17 +2,16 @@
 #include <stdio.h>
 int main(void)
 {
-    int a = get_int("Input your number ");
-    if (a < 0)
+    int tip;
+    int bill;
+    do
     {
-        printf("Your number is negative!\n");
+        bill = get_int("What is the bill? ");
+        tip = get_int("Insert tip: ");
+
     }
-    else if (a > 0)
-    {
-        printf("Your number is positive!\n");
-    }
-    else
-    {
-        printf("Your number is neutral!\n");
-    }
+    while (bill < 0 && tip < 0);
+    int total = bill + bill * tip/100;
+    printf("%i\n",total);
+
 }
